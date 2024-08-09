@@ -19,8 +19,10 @@ body {
 .header {
   position: fixed;
   width: 100%;
-  height: 95px;
-  background-color: #EFEAE2;
+  /* height: 95px; */
+  height: 60px;
+  /* background-color: #EFEAE2; */
+  background-color: rgba(239, 234, 226, 0.8);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,7 +35,8 @@ body {
   position: fixed;
   width: 40px;
   height: 40px;
-  top: 3%;
+  /* top: 3%;
+  right: 5%; */
   right: 5%;
 }
 
@@ -161,35 +164,190 @@ body {
 　　HOME
 ==============================================================*/
 /* ==================== TOP ================== */
+/* タイトルアニメーション */
+.title_wrap {
+  opacity: 0;
+}
+
+.title_animation {
+  animation: title_opacity 3s cubic-bezier(0, 1, 1, 1) forwards;
+  overflow: hidden;
+  position: relative;
+}
+
+.title_animation::before {
+  animation: title_animation 3s cubic-bezier(0, 0.1, 0.7, 1) forwards;
+  background: #EFEAE2;
+  content: '';
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+@keyframes title_opacity {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes title_animation {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .TOP {
+  display: grid;
+  grid-template-rows: 1fr 150px;
   height: 100vh;
-  padding: 10px;
+  padding: 10px 10px 0;
 }
 
 .TOP figure {
+  /* width: 100%;
+  height: 80%; */
+  height: auto;
+  /* background-color: #D9D9D9; */
+  /* padding: 10px 10px 0; */
+}
+
+.TOP_img {
+  overflow: auto;
+}
+
+#TOP_img {
+  opacity: 0;
+  transition: 3.3s;
+}
+
+#TOP_img.is-show {
+  opacity: 1;
+}
+
+.TOP figure img {
   width: 100%;
-  height: 85%;
-  background-color: #D9D9D9;
+  height: 100%;
+  object-fit: cover;
+}
+
+.TOP_title {
+  /* height: 150px; */
+  align-content: center;
 }
 
 .TOP h1 {
   font-size: 40px;
   font-family: Georgia;
   text-align: center;
-  margin-top: 30px;
+  /* margin-top: 30px; */
+}
+
+#TOP_title_h1 {
+  opacity: 0;
+  transition: 2s;
+  transform: translate(0, 100px);
+}
+
+#TOP_title_h1.is-show {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .TOP p {
   font-size: 11px;
   margin-top: 6px;
   text-align: center;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
+}
+
+#TOP_title_p {
+  opacity: 0;
+  transition: 2s;
+  transition-delay: 0.5s;
+  transform: translate(0, 100px);
+}
+
+#TOP_title_p.is-show {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 
 /* ==================== ABOUT/INFO/MENU ================== */
 .ABOUT,.INFO,.MENU {
-  margin: 85px 18px;
+  margin: 80px 18px;
+}
+
+/*ふわっと下から表示*/
+.img_items.offs .effect {
+  opacity: 0;
+  transform: translate(0, 100px);
+  -webkit-transform: translate(0, 100px);
+}
+.img_items.ons .effect {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+/*以下、遅延の設定*/
+.img_items.ons .delay-1 {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.img_items.ons .delay-2 {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+/* .img_items.ons .delay-3 {
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.img_items.ons .delay-4 {
+  -webkit-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+.img_items.ons .delay-5 {
+  -webkit-transition-delay: 2s;
+  transition-delay: 2s;
+} */
+
+/*ふわっとその場で表示*/
+.sec_items.offs .effect {
+  opacity: 0;
+}
+.sec_items.ons .effect {
+  opacity: 1;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/*以下、遅延の設定*/
+.sec_items.ons .delay-1 {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.sec_items.ons .delay-2 {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.sec_items.ons .delay-3 {
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.sec_items.ons .delay-4 {
+  -webkit-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+
+
+
+
+
+
+.sp_bottom {
+  border-bottom: solid 1px #D9D9D9;
 }
 
 .img_main {
@@ -197,6 +355,13 @@ body {
   height: 100%;
   aspect-ratio: 2 / 3;
   background-color: #D9D9D9;
+  border-radius: 25px;
+}
+
+.img_main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 25px;
 }
 
@@ -237,7 +402,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  line-height: 2.5em;
+  line-height: 2.6em;
 }
 
 .sec_text .more {
@@ -256,16 +421,37 @@ body {
 
 /* ==================== FAQ ================== */
 .FAQ {
-  background-color: #F0E7C1;
-  padding: 20px;
+  position: relative;
+  width: 100vw;
+}
+
+/*ふわっとその場でまとめて表示*/
+.opacity_box.offs.effect {
+  opacity: 0;
+}
+.opacity_box.ons.effect {
+  opacity: 1;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.faq_bg img{
+  object-fit: cover;
+  width: 100%;
+  height: 273px;
 }
 
 .faq_text {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
   text-align: center;
   background-color: #F3F2F0;
   padding: 40px 0;
   border-radius: 50px;
   justify-items: center;
+  width: 90%;
 }
 
 .faq_text h2{
@@ -273,6 +459,7 @@ body {
   font-family: "Marcellus", serif;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 0.1em;
 }
 
 .faq_text p{
@@ -282,6 +469,7 @@ body {
   font-style: normal;
   margin: 36px auto 43px;
   line-height: 1.8em;
+  letter-spacing: 0.2em;
 }
 
 .faq_text .more {
@@ -291,6 +479,10 @@ body {
   font-family: "Marcellus", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.faq_cover {
+  display: none;
 }
 
 
@@ -360,6 +552,7 @@ body {
   font-weight: Regular;
   font-style: normal;
   line-height: 2em;
+  letter-spacing: 0.1em;
 }
 
 .diary_text01 time {
@@ -373,6 +566,13 @@ body {
 .img_null {
   height: 162px;
   background-color: #D9D9D9;
+}
+
+.img_null img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
 }
 
 /* ==================== footer ================== */
@@ -462,6 +662,17 @@ body {
   font-weight: 400;
   font-style: normal;
   line-height: 2.3em;
+  letter-spacing: 0.1em;
+}
+
+#info_text {
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 1s;
+}
+
+#info_text.is-show {
+  opacity: 1;
 }
 
 .info h3 {
@@ -499,6 +710,14 @@ body {
   background-color: #D9D9D9;
   border-radius: 25px;
   margin: 85px 0 85px auto;
+  display: block;
+}
+
+.img_info img {
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
+  border-radius: 25px;
 }
 
 .info_text {
@@ -552,6 +771,7 @@ body {
 .info_box{
   border-bottom: 1px solid #9E9E9E;
   padding: 30px 0;
+  /* letter-spacing: 0.1em; */
 }
 
 .salon_info dt{
@@ -561,11 +781,13 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  letter-spacing: 0.1em;
 }
 
 .salon_info dd{
   line-height: 2em;
   font-size: 14px;
+  letter-spacing: 0.1em;
 }
 
 .info_small {
@@ -615,11 +837,13 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  letter-spacing: 0.1em;
 }
 
 .access dd{
   line-height: 2em;
   font-size: 14px;
+  letter-spacing: 0.1em;
 }
 
 .map {
@@ -627,6 +851,38 @@ body {
   height: auto;
   aspect-ratio: 1 / 1;
   background-color: #D9D9D9;
+}
+
+.img-wrap {
+  opacity: 0;
+}
+
+.img-animation {
+  animation: img-opacity 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-animation::before {
+  animation: img-animation 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  background: #EFEAE2;
+  content: '';
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+@keyframes img-opacity {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes img-animation {
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /*==============================================================
@@ -641,6 +897,17 @@ body {
   font-family: "Marcellus", serif;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 0.2em;
+}
+
+#menu_text {
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 1s;
+}
+
+#menu_text.is-show {
+  opacity: 1;
 }
 
 .br_tb {
@@ -675,9 +942,16 @@ body {
   border-radius: 30px 30px 0 0;
 }
 
+.img_menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px 30px 0 0;
+}
+
 .menu_title {
   border-bottom: 1px solid #9E9E9E;
-  padding: 30px 20px 20px;
+  padding: 40px 20px 20px;
 }
 
 .menu_title h3 {
@@ -685,7 +959,8 @@ body {
   font-family: "Marcellus", serif;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  letter-spacing: 0.15em;
 }
 
 .menu_title p {
@@ -704,8 +979,9 @@ body {
   font-family: "Marcellus", serif;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 2.5em;
+  letter-spacing: 0.1em;
 }
 
 .menu_info_02 {
@@ -719,7 +995,7 @@ body {
 
 .process_btn {
   font-size: 14px;
-  padding: 8px 20px;
+  padding: 10px 20px;
   background-color: #525A5F;
   color: #fff;
   border-radius: 25px;
@@ -728,6 +1004,7 @@ body {
   font-style: normal;
   margin-bottom: 38px;
   margin-left: 20px;
+  letter-spacing: 0.05em;
 }
 
 /*==============================================================
@@ -735,6 +1012,10 @@ body {
 ==============================================================*/
 .faq {
   margin: 0 14px 120px;
+}
+
+.faq .sec_name {
+  letter-spacing: 0.1em;
 }
 
 .sub_name {
@@ -745,6 +1026,7 @@ body {
   font-style: normal;
   margin-top: 9px;
   margin-bottom: 70px;
+  letter-spacing: 0.2em;
 }
 
 .faq h3 {
@@ -753,6 +1035,7 @@ body {
   font-family: "Marcellus", serif;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 0.1em;
 }
 
 .toggle {
@@ -767,6 +1050,7 @@ body {
   font-style: normal;
   line-height: 2em;
   margin-bottom: 20px;
+  letter-spacing: 0.08em;
 }
 
 .title,
@@ -852,14 +1136,51 @@ body {
   margin: 80px 20px 120px;
 }
 
+/* .sec_title {
+  white-space:nowrap;
+  overflow:hidden;
+  animation:title_animation 3s linear;
+  position: relative;
+}
+
+@keyframes title_animation {
+  from {
+    width: 0em;
+  }
+  to {
+    width: 4em;
+  }
+} */
+
+/* .sec_title {
+  font: 400 "Marcellus", serif;
+  width: 4ch;
+  overflow: hidden;
+  animation: sec_title 2s;
+  margin: 0 auto;
+  opacity: 1;
+  inset: 0;
+  pointer-events: none;
+}
+@keyframes sec_title {
+  from {
+    width: 0ch;
+    opacity: 0;
+  }
+} */
+
+
+
 .diary h2 {
   margin-bottom: 90px;
 }
 
 /* ページネーション */
-/* .Pagination {
+.Pagination {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-top: 100px;
 }
 .Pagination-Item-Link {
   width: 45px;
@@ -870,10 +1191,9 @@ body {
   align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
-  background: #fff;
-  border: solid 2px #111;
+  border: solid 1px #9E9E9E;
   font-size: 14px;
-  color: #111;
+  color: #9E9E9E;
   font-weight: bold;
   transition: all 0.15s linear;
 }
@@ -881,17 +1201,17 @@ body {
   width: 20px;
 }
 .Pagination-Item-Link.isActive {
-  background: #111;
+  background: #9E9E9E;
   color: #fff;
   pointer-events: none;
 }
 .Pagination-Item-Link:not(.isActive):hover {
-  background: #111;
+  background: #9E9E9E;
   color: #fff;
 }
 .Pagination > * + * {
   margin-left: 8px;
-} */
+}
 
 @media screen and (min-width: 601px) {
   /* タブレット用レイアウト 601px以上の範囲に収めるデザインはこの中に記述 */
@@ -902,6 +1222,7 @@ body {
   /* ==================== ヘッダー ================== */
   .header {
     padding: 0 25px;
+    height: 80px;
   }
 
   .btn i{
@@ -919,43 +1240,99 @@ body {
 
   /* ==================== TOP ================== */
   .TOP {
-    padding: 17px;
+    padding: 17px 17px 0;
+    grid-template-rows: 1fr 200px;
   }
 
-  .TOP h1 {
+  /* .TOP h1 {
     margin-top: 70px;
-  }
+  } */
 
   /* ==================== ABOUT/INFO/MENU ================== */
   .ABOUT,.INFO,.MENU {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 180px 0;
-    display: flex;
+    /* display: flex; */
   }
 
-  .INFO {
+  .ABOUT {
+    margin-top: 140px;
+  }
+
+  .sp_bottom {
+    display: none;
+  }
+
+  /* .INFO {
     flex-direction: row-reverse;
+  } */
+
+  .INFO .sec_img{
+    order: 2;
+  }
+
+  .INFO .sec_text{
+    order: 1;
   }
 
   .img_margin_right {
     margin-right: 17px;
   }
 
+  /* .img_margin_top {
+    margin-top: 120px;
+  } */
+
   .img_main {
-    width: 200px;
-    height: 325px;
+    /* width: 200px; */
+    /* height: 325px; */
+    /* aspect-ratio: 2 / 3; */
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
     border-radius: 30px;
   }
 
-  .main_radius01 {
+  .img_main img {
+    border-radius: 30px;
+  }
+
+  .main_radius01 img {
     border-radius: 0 30px 30px 0;
   }
 
-  .main_radius02 {
+  .main_radius02 img {
     border-radius: 30px 0 0 30px;
   }
 
+  .img_margin_top {
+    margin-top: 100px;
+  }
+
+  .img_margin_bottom {
+    margin-bottom: 100px;
+  }
+
+  .sec_img {
+    /* margin-bottom: 0; */
+    margin: 0;
+    justify-content: start;
+    width: 50vw;
+  }
+
+  .INFO .sec_img {
+    justify-content: end;
+  }
+
   .sec_text {
-    margin: 0 35px 0 40px;
+    /* margin: 0 35px 0 40px; */
+    margin: auto;
+    width: 80%;
+  }
+
+  .sec_text p {
+    letter-spacing: 0.1em;
   }
 
   .sec_text .sub_title {
@@ -977,16 +1354,34 @@ body {
     padding: 0;
   }
 
+  .faq_bg img{
+    height: 500px;
+  }
+
   .faq_text {
-    width: 690px;
-    height: 100%;
-    border-radius: 250px;
-    margin: auto;
+    aspect-ratio: 1 / 1;
+    max-width: 680px;
+    max-height: 680px;
+    border-radius: 50%;
     align-content: center;
+    z-index: 10;
   }
 
   .faq_text p{
     margin: 50px auto 60px;
+  }
+
+  .faq_cover {
+    display: block;
+    width: 100vw;
+    height: 100px;
+    background-color: #EFEAE2;
+    position: absolute;
+    z-index: 11;
+  }
+
+  .cover_top {
+    top: -100px;
   }
 
   /* ==================== DIARY ================== */
@@ -1057,6 +1452,10 @@ body {
     margin: 0 40px 140px;
   }
 
+  .br_sp {
+    display: none;
+  }
+
   .sec_name {
     padding-top: 180px;
   }
@@ -1066,17 +1465,24 @@ body {
     grid-template-columns: 4.5fr 3fr;
     column-gap: 75px;
     margin: 140px 0;
-
   }
 
-  .img_info_left {
-    width: 100%;
-    margin: 0;
+  .info h3 {
+    margin-top: 0;
   }
 
   .img_info_right {
-    width: 100%;
+    margin: 0;
+  }
 
+  .img_info_left {
+    margin: 0;
+  }
+
+  .img_info img {
+    width: 100%;
+    overflow: auto;
+    border-radius: 35px;
   }
 
   .info_text {
@@ -1105,6 +1511,7 @@ body {
   .menu_text {
     margin:  40px 45px 140px;
     text-align: center;
+    letter-spacing: 0.15em;
   }
 
   .br_tb {
@@ -1135,12 +1542,20 @@ body {
     border-radius: 40px 40px 0 0;
   }
 
+  .img_menu img {
+    border-radius: 40px 40px 0 0;
+  }
+
   .menu_title {
     padding: 30px 0 20px;
   }
 
   .menu_info {
     padding: 30px 0 38px;
+  }
+
+  .menu_info_02 {
+    letter-spacing: 0.1em;
   }
 
   .process_btn {
@@ -1162,6 +1577,10 @@ body {
     margin: 60px 0 27px 15px;
   }
 
+  .faq_A {
+    letter-spacing: 0.1em;
+  }
+
   /*==============================================================
   　　　TB_DIARY
   ==============================================================*/
@@ -1173,6 +1592,14 @@ body {
     margin-bottom: 140px;
   }
 
+  .diary_text01 p {
+    letter-spacing: 0.1em;
+  }
+
+  .diary_text01 time {
+    letter-spacing: 0.05em;
+  }
+
 }
 
 @media screen and (min-width: 1081px) {
@@ -1182,6 +1609,10 @@ body {
   　　　PC_HOME
   ==============================================================*/
   /* ==================== ヘッダー ================== */
+  .header {
+    height: 120px;
+  }
+
   .sp_nav {
     display: none;
   }
@@ -1222,11 +1653,13 @@ body {
   .TOP {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     padding: 4% 4% 4% 0;
   }
 
   .TOP_img {
     order: 2;
+    overflow: auto;
   }
 
   .TOP_title {
@@ -1250,10 +1683,10 @@ body {
   }
 
   /* ==================== ABOUT/INFO/MENU ================== */
-  .ABOUT,.INFO,.MENU {
+  /* .ABOUT,.INFO,.MENU {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
+  } */
 
   .img_main {
     width: 45%;
@@ -1262,17 +1695,26 @@ body {
     border-radius: 40px;
   }
 
-  .main_radius01 {
+  .img_main img {
+    border-radius: 40px;
+    max-width: 100%;
+  }
+
+  .main_radius01 img {
     border-radius: 0 40px 40px 0;
   }
 
-  .main_radius02 {
+  .main_radius02 img {
     border-radius: 40px 0 0 40px;
   }
 
   .sec_img {
     width: 100%;
     margin-bottom: 0;
+    justify-content: space-between;
+  }
+
+  .INFO .sec_img {
     justify-content: space-between;
   }
 
@@ -1296,7 +1738,13 @@ body {
 
   .sec_text h2{
     font-size: 32px;
+    letter-spacing: 0.05em;
   }
+
+  .sec_text .more {
+    letter-spacing: 0.05em;
+  }
+
 
   .sec_text .sub_title {
     font-size: 24px;
@@ -1307,13 +1755,13 @@ body {
     font-size: 14px;
   }
 
-  .INFO .sec_img{
+  /* .INFO .sec_img{
     order: 2;
   }
 
   .INFO .sec_text{
     order: 1;
-  }
+  } */
 
   /* ==================== FAQ ================== */
   .faq_text h2 {
@@ -1325,6 +1773,10 @@ body {
     margin: 60px auto;
   }
 
+  .faq_text .more {
+    letter-spacing: 0.05em;
+  }
+
   /* ==================== DIARY ================== */
   .DIARY {
     max-width: 1080px;
@@ -1333,6 +1785,11 @@ body {
 
   .DIARY h2 {
     font-size: 32px;
+    letter-spacing: 0.03em;
+  }
+
+  .DIARY .more {
+    letter-spacing: 0.05em;
   }
 
   .diary_text01 p {
@@ -1415,6 +1872,7 @@ body {
   ==============================================================*/
   .sec_name {
     font-size: 32px;
+    letter-spacing: 0.05em;
   }
 
   .info_text {
@@ -1435,6 +1893,10 @@ body {
     margin: 0;
   }
 
+  .img_info img {
+    border-radius: 40px;
+  }
+
   .info_content {
     max-width: 1080px;
     column-gap: 110px;
@@ -1451,6 +1913,7 @@ body {
 
   .info h3 {
     margin-top: 0;
+    letter-spacing: 0.03em;
   }
 
   .map {
@@ -1488,6 +1951,10 @@ body {
     border-radius: 0 40px 40px 0;
   }
 
+  .menu_box_grid .img_menu img {
+    border-radius: 0 40px 40px 0;
+  }
+
   .menu_box_grid .menu_box_text {
     order: 1;
     border-radius: 40px 0 0 40px;
@@ -1504,11 +1971,16 @@ body {
     border-radius: 40px 0 0 40px;
   }
 
+  .img_menu img {
+    border-radius: 40px 0 0 40px;
+  }
+
   .menu_title {
     display: flex;
     justify-content: space-between;
-    padding: 0;
-    border-bottom: none;
+    /* padding: 0; */
+    /* border-bottom: none; */
+    padding: 40px 0 30px;
   }
 
   .menu_title h3 {
@@ -1541,6 +2013,10 @@ body {
     font-size: 16px;
   }
 
+  .title_text {
+    letter-spacing: 0.1em;
+  }
+
   .faq h3 {
     font-size: 24px;
   }
@@ -1556,6 +2032,11 @@ body {
     max-width: 1080px;
     margin: 0 auto 240px;
   }
+
+  .diary_text01 time {
+    letter-spacing: 0.1em;
+  }
+
 
 
 
