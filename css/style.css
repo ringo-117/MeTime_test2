@@ -1151,7 +1151,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 180px 0;
-    display: flex;
+    /* display: flex; */
   }
 
   .ABOUT {
