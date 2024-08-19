@@ -19,9 +19,7 @@ body {
 .header {
   position: fixed;
   width: 100%;
-  /* height: 95px; */
   height: 60px;
-  /* background-color: #EFEAE2; */
   background-color: rgba(239, 234, 226, 0.8);
   display: flex;
   align-items: center;
@@ -35,8 +33,6 @@ body {
   position: fixed;
   width: 40px;
   height: 40px;
-  /* top: 3%;
-  right: 5%; */
   right: 5%;
 }
 
@@ -205,11 +201,7 @@ body {
 }
 
 .TOP figure {
-  /* width: 100%;
-  height: 80%; */
   height: auto;
-  /* background-color: #D9D9D9; */
-  /* padding: 10px 10px 0; */
 }
 
 .TOP_img {
@@ -232,7 +224,6 @@ body {
 }
 
 .TOP_title {
-  /* height: 150px; */
   align-content: center;
 }
 
@@ -240,7 +231,6 @@ body {
   font-size: 40px;
   font-family: Georgia;
   text-align: center;
-  /* margin-top: 30px; */
 }
 
 #TOP_title_h1 {
@@ -258,7 +248,6 @@ body {
   font-size: 11px;
   margin-top: 6px;
   text-align: center;
-  /* margin-bottom: 40px; */
 }
 
 #TOP_title_p {
@@ -301,18 +290,6 @@ body {
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
-/* .img_items.ons .delay-3 {
-  -webkit-transition-delay: 1s;
-  transition-delay: 1s;
-}
-.img_items.ons .delay-4 {
-  -webkit-transition-delay: 1.5s;
-  transition-delay: 1.5s;
-}
-.img_items.ons .delay-5 {
-  -webkit-transition-delay: 2s;
-  transition-delay: 2s;
-} */
 
 /*ふわっとその場で表示*/
 .sec_items.offs .effect {
@@ -340,11 +317,6 @@ body {
   -webkit-transition-delay: 1.5s;
   transition-delay: 1.5s;
 }
-
-
-
-
-
 
 .sp_bottom {
   border-bottom: solid 1px #D9D9D9;
@@ -500,7 +472,7 @@ body {
 }
 
 .diary_text {
-  border-bottom: solid 1px #9E9E9E;
+  border-bottom: solid 1px #B3B5B6;
   display: flex;
   justify-content: space-between;
 }
@@ -508,17 +480,6 @@ body {
 .diary_link {
   margin: auto 0;
   margin-left: 37px;
-}
-
-.diary_link p {
-  border: solid 1px #9E9E9E;
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  text-align: center;
-  align-content: center;
-  color: #9E9E9E;
-  font-weight: lighter;
 }
 
 .DIARY .more {
@@ -541,8 +502,20 @@ body {
   margin-bottom: 20px;
 }
 
+.diary_more {
+  align-content: center;
+  margin-left: 37px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.diary_more img {
+  width: 30px;
+  height: 30px;
+}
+
 .diary_top {
-  border-top: solid 1px #9E9E9E;
+  border-top: solid 1px #B3B5B6;
   margin-top: 0;
 }
 
@@ -714,8 +687,6 @@ body {
 }
 
 .img_info img {
-  /* width: 100%;
-  height: 100%; */
   object-fit: cover;
   border-radius: 25px;
 }
@@ -729,7 +700,7 @@ body {
   margin: 0 auto;
   margin-bottom: 30px;
   grid-template:
-    "box1 box1" 1fr
+    "box1 box1" auto
     "box2 box2" 1fr
     "box3 box3" 1fr
     "box4 box4" auto
@@ -771,7 +742,6 @@ body {
 .info_box{
   border-bottom: 1px solid #9E9E9E;
   padding: 30px 0;
-  /* letter-spacing: 0.1em; */
 }
 
 .salon_info dt{
@@ -923,6 +893,10 @@ body {
 .menu_text_02 {
   font-size: 14px;
   line-height: 2em;
+}
+
+.menu_info_sub {
+  font-size: 16px;
 }
 
 .menu_box {
@@ -1136,82 +1110,10 @@ body {
   margin: 80px 20px 120px;
 }
 
-/* .sec_title {
-  white-space:nowrap;
-  overflow:hidden;
-  animation:title_animation 3s linear;
-  position: relative;
-}
-
-@keyframes title_animation {
-  from {
-    width: 0em;
-  }
-  to {
-    width: 4em;
-  }
-} */
-
-/* .sec_title {
-  font: 400 "Marcellus", serif;
-  width: 4ch;
-  overflow: hidden;
-  animation: sec_title 2s;
-  margin: 0 auto;
-  opacity: 1;
-  inset: 0;
-  pointer-events: none;
-}
-@keyframes sec_title {
-  from {
-    width: 0ch;
-    opacity: 0;
-  }
-} */
-
-
-
 .diary h2 {
   margin-bottom: 90px;
 }
 
-/* ページネーション */
-.Pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-}
-.Pagination-Item-Link {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow: hidden;
-  border: solid 1px #9E9E9E;
-  font-size: 14px;
-  color: #9E9E9E;
-  font-weight: bold;
-  transition: all 0.15s linear;
-}
-.Pagination-Item-Link-Icon {
-  width: 20px;
-}
-.Pagination-Item-Link.isActive {
-  background: #9E9E9E;
-  color: #fff;
-  pointer-events: none;
-}
-.Pagination-Item-Link:not(.isActive):hover {
-  background: #9E9E9E;
-  color: #fff;
-}
-.Pagination > * + * {
-  margin-left: 8px;
-}
 
 @media screen and (min-width: 601px) {
   /* タブレット用レイアウト 601px以上の範囲に収めるデザインはこの中に記述 */
@@ -1244,16 +1146,12 @@ body {
     grid-template-rows: 1fr 200px;
   }
 
-  /* .TOP h1 {
-    margin-top: 70px;
-  } */
-
   /* ==================== ABOUT/INFO/MENU ================== */
   .ABOUT,.INFO,.MENU {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 180px 0;
-    /* display: flex; */
+    display: flex;
   }
 
   .ABOUT {
@@ -1263,10 +1161,6 @@ body {
   .sp_bottom {
     display: none;
   }
-
-  /* .INFO {
-    flex-direction: row-reverse;
-  } */
 
   .INFO .sec_img{
     order: 2;
@@ -1280,16 +1174,8 @@ body {
     margin-right: 17px;
   }
 
-  /* .img_margin_top {
-    margin-top: 120px;
-  } */
-
   .img_main {
-    /* width: 200px; */
-    /* height: 325px; */
-    /* aspect-ratio: 2 / 3; */
     width: 100%;
-    /* height: 100%; */
     height: auto;
     border-radius: 30px;
   }
@@ -1315,7 +1201,6 @@ body {
   }
 
   .sec_img {
-    /* margin-bottom: 0; */
     margin: 0;
     justify-content: start;
     width: 50vw;
@@ -1326,7 +1211,6 @@ body {
   }
 
   .sec_text {
-    /* margin: 0 35px 0 40px; */
     margin: auto;
     width: 80%;
   }
@@ -1393,10 +1277,9 @@ body {
     padding: 0 20px;
   }
 
-  .diary_link p {
+  .diary_more img {
     width: 40px;
     height: 40px;
-    font-size: 25px;
   }
 
   .diary_text01 {
@@ -1683,11 +1566,6 @@ body {
   }
 
   /* ==================== ABOUT/INFO/MENU ================== */
-  /* .ABOUT,.INFO,.MENU {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  } */
-
   .img_main {
     width: 45%;
     height: auto;
@@ -1755,14 +1633,6 @@ body {
     font-size: 14px;
   }
 
-  /* .INFO .sec_img{
-    order: 2;
-  }
-
-  .INFO .sec_text{
-    order: 1;
-  } */
-
   /* ==================== FAQ ================== */
   .faq_text h2 {
     font-size: 32px;
@@ -1788,8 +1658,9 @@ body {
     letter-spacing: 0.03em;
   }
 
-  .DIARY .more {
-    letter-spacing: 0.05em;
+  .diary_more img {
+    width: 50px;
+    height: 50px;
   }
 
   .diary_text01 p {
@@ -1955,6 +1826,10 @@ body {
     border-radius: 0 40px 40px 0;
   }
 
+  .menu_big figure {
+    height: auto;
+  }
+
   .menu_box_grid .menu_box_text {
     order: 1;
     border-radius: 40px 0 0 40px;
@@ -1976,16 +1851,15 @@ body {
   }
 
   .menu_title {
-    display: flex;
-    justify-content: space-between;
-    /* padding: 0; */
-    /* border-bottom: none; */
     padding: 40px 0 30px;
   }
 
   .menu_title h3 {
     font-size: 24px;
-    margin: 0;
+  }
+
+  .menu_other .menu_title h3 {
+    margin-bottom: 0px;
   }
 
   .menu_title p {
@@ -1994,7 +1868,14 @@ body {
 
   .menu_info_01 {
     font-size: 20px;
-    /* max-width: 285px; */
+  }
+
+  .menu_other .menu_info_01 {
+    margin-bottom: 0px;
+  }
+
+  .menu_other .menu_bottom {
+    margin-bottom: 20px;
   }
 
   .process_btn {

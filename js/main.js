@@ -59,20 +59,6 @@ $(window).on('load scroll', function(){
     }
 });
 
-//　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　DIARY　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 スクロール出現
@@ -94,7 +80,8 @@ function scr_ani(scr, offs_max) {
 		if (trigger < 0) {
 		  offs.removeClass("offs").addClass("ons");
 		} else {
-		  break;
+		//   break;
+		return;
 		}
 	  }
 	}
@@ -108,7 +95,8 @@ function scr_ani(scr, offs_max) {
 		if (trigger > 0) {
 		  ons.removeClass("ons").addClass("offs");
 		} else {
-		  break;
+		//   break;
+		return;
 		}
 	  }
 	}
