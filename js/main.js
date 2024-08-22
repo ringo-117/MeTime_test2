@@ -12,6 +12,7 @@
 	});
 }
 
+
 $(function () {
 	// ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
 	$(".btn").click(function () {
@@ -58,6 +59,8 @@ $(window).on('load scroll', function(){
 		$('#menu_text').addClass('is-show');
     }
 });
+
+
 
 
 /*
@@ -158,3 +161,131 @@ function scr_ani(scr, offs_max) {
 	titles.forEach((title) => {
 	observer2.observe(title);
 	});
+
+
+//　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　MENU(工程)　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// ヘッドセラピー
+{
+	const open = document.getElementById('modal-open');
+	const container = document.getElementById('modal-container');
+	const modalBg = document.getElementById('modal-bg');
+	const close = document.getElementById('modal-close');
+
+	open.addEventListener('click', () => {
+		container.classList.add('active');
+		modalBg.classList.add('active');
+	});
+	close.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+	modalBg.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+}
+
+// ボディケア
+{
+	const open = document.getElementById('modal-open_2');
+	const container = document.getElementById('modal-container_2');
+	const modalBg = document.getElementById('modal-bg_2');
+	const close = document.getElementById('modal-close_2');
+
+	open.addEventListener('click', () => {
+		container.classList.add('active');
+		modalBg.classList.add('active');
+	});
+	close.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+	modalBg.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+}
+
+// マタニティケア
+{
+	const open = document.getElementById('modal-open_3');
+	const container = document.getElementById('modal-container_3');
+	const modalBg = document.getElementById('modal-bg_3');
+	const close = document.getElementById('modal-close_3');
+
+	open.addEventListener('click', () => {
+		container.classList.add('active');
+		modalBg.classList.add('active');
+	});
+	close.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+	modalBg.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+}
+
+// よもぎ蒸し
+{
+	const open = document.getElementById('modal-open_4');
+	const container = document.getElementById('modal-container_4');
+	const modalBg = document.getElementById('modal-bg_4');
+	const close = document.getElementById('modal-close_4');
+
+	open.addEventListener('click', () => {
+		container.classList.add('active');
+		modalBg.classList.add('active');
+	});
+	close.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+	modalBg.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+}
+
+// baseball care&lesson
+{
+	const open = document.getElementById('modal-open_5');
+	const container = document.getElementById('modal-container_5');
+	const modalBg = document.getElementById('modal-bg_5');
+	const close = document.getElementById('modal-close_5');
+
+	open.addEventListener('click', () => {
+		container.classList.add('active');
+		modalBg.classList.add('active');
+	});
+	close.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+	modalBg.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+}
+
+// ドライヘッドスパ
+{
+	const open = document.getElementById('modal-open_6');
+	const container = document.getElementById('modal-container_6');
+	const modalBg = document.getElementById('modal-bg_6');
+	const close = document.getElementById('modal-close_6');
+
+	open.addEventListener('click', () => {
+		container.classList.add('active');
+		modalBg.classList.add('active');
+	});
+	close.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+	modalBg.addEventListener('click', () => {
+		container.classList.remove('active');
+		modalBg.classList.remove('active');
+	});
+}

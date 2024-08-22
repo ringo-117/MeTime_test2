@@ -108,10 +108,22 @@
             <p class="menu_info_02">アタマを癒すことで、首・肩こりの解消、不眠やストレスの軽減、小顔・美肌などの美容効果、眼精疲労の解消、自律神経を整えることができます。</p>
           </div>
           <div class="process">
-            <a><button class="process_btn">工程を見る →</button></a>
+            <a><button id="modal-open" class="process_btn">工程を見る →</button></a>
           </div>
         </div>
+        <div id="modal-container">
+          <p class="modal_title">ヘッドセラピーの流れ</p>
+          <div class="modal_p">
+            <p class="modal_01">カウンセリング、同意書</p>
+            <p class="modal_02">施術</p>
+            <p class="modal_02">アフターカウンセリング</p>
+            <p class="modal_02">アフターティー</p>
+            <p class="modal_03">終了</p>
+          </div>
+          <button id="modal-close" class="process_close">閉じる</button>
+        </div>
       </article>
+      <div id="modal-bg"></div>
 
       <article class="menu_box menu_box_grid img_items offs">
         <figure class="img_menu img_items effect delay-1">
@@ -127,10 +139,18 @@
             <p class="menu_info_02">忙しい日々の合間に、リラックスできる時間を。自分へのご褒美に身体のケアを体験してください。</p>
           </div>
           <div class="process">
-            <a><button class="process_btn">工程を見る →</button></a>
+            <a><button id="modal-open_2" class="process_btn">工程を見る →</button></a>
           </div>
         </div>
+        <div id="modal-container_2">
+          <p class="modal_title">ボディケアの流れ</p>
+          <div class="modal_p">
+            <p class="modal_01">工程準備中</p>
+          </div>
+          <button id="modal-close_2" class="process_close">閉じる</button>
+        </div>
       </article>
+      <div id="modal-bg_2"></div>
 
       <article class="menu_box img_items offs">
         <figure class="img_menu img_items effect delay-1">
@@ -146,10 +166,18 @@
             <p class="menu_info_02">妊娠中の身体的・精神的な健康をサポートし、ホルモンの変化や体重の増加、姿勢の変化などで腰痛、肩こり、むくみ、疲労感といったさまざまな不快感を和らげませんか。</p>
           </div>
           <div class="process">
-            <a><button class="process_btn">工程を見る →</button></a>
+            <a><button id="modal-open_3" class="process_btn">工程を見る →</button></a>
           </div>
         </div>
+        <div id="modal-container_3">
+          <p class="modal_title">マタニティケアの流れ</p>
+          <div class="modal_p">
+            <p class="modal_01">工程準備中</p>
+          </div>
+          <button id="modal-close_3" class="process_close">閉じる</button>
+        </div>
       </article>
+      <div id="modal-bg_3"></div>
 
       <article class="menu_box menu_box_grid img_items offs">
         <figure class="img_menu img_items effect delay-1">
@@ -167,25 +195,45 @@
               さらに、「よもぎ」にはホルモンバランスを整える作用があり、リラックス効果や自律神経を整える効果もあります。</p>
           </div>
           <div class="process">
-            <a><button class="process_btn">工程を見る →</button></a>
+            <a><button id="modal-open_4" class="process_btn">工程を見る →</button></a>
           </div>
         </div>
+        <div id="modal-container_4">
+          <p class="modal_title">よもぎ蒸しの流れ</p>
+          <div class="modal_p">
+            <p class="modal_01">工程準備中</p>
+          </div>
+          <button id="modal-close_4" class="process_close">閉じる</button>
+        </div>
       </article>
+      <div id="modal-bg_4"></div>
 
-      <article class="menu_box img_items offs menu_other">
+      <article class="menu_box img_items offs">
         <figure class="img_menu img_items effect delay-1">
           <img src="img/test_img.jpg" alt="#">
         </figure>
         <div class="menu_box_text img_items effect delay-1">
           <div class="menu_title">
             <h3>baseball care&lesson</h3>
+            <p>total　40分〜 /  ¥00,000</p>
           </div>
           <div class="menu_info">
             <p class="menu_info_02"> "野球を楽しむ力を伸ばす!!"小学生向けのケア&レッスン成長をサポートする"体のケア&ストレッチ"
               子どもたちの身体は急速に成長するため、適切なケアが必要です。レッスンでは、スポーツ前後のストレッチや、ケガ予防のためのケア方法を教えて身体を大切にしながら野球を楽しみましょう!!</p>
           </div>
+          <div class="process">
+            <a><button id="modal-open_5" class="process_btn">工程を見る →</button></a>
+          </div>
+        </div>
+        <div id="modal-container_5">
+          <p class="modal_title">baseball care&lesson<br>の流れ</p>
+          <div class="modal_p">
+            <p class="modal_01">工程準備中</p>
+          </div>
+          <button id="modal-close_5" class="process_close">閉じる</button>
         </div>
       </article>
+      <div id="modal-bg_5"></div>
 
       <article class="menu_box menu_box_grid img_items offs menu_other">
         <figure class="img_menu img_items effect delay-1">
@@ -232,25 +280,41 @@
             <h3>ドライヘッドスパ</h3>
           </div>
           <div class="menu_info">
-            <p class="menu_info_01">Me Timeの〇〇コース（20分）</p>
+            <p class="menu_info_01">Me Timeの〇〇コース<br class="br_sp"><span class="menu_time">（total　20分 /  ¥2,200）</span></p>
             <p class="menu_info_02 menu_bottom">
               仕事の合間や時間がない時にすっきりできるお手軽コース。頭、顔を全体的に揉みほぐします。
             </p>
-            <p class="menu_info_01">Me Timeの〇〇コース（40分）</p>
+            <p class="menu_info_01">Me Timeの〇〇コース<br class="br_sp">（total　40分 /  ¥5,000）</p>
             <p class="menu_info_02 menu_bottom">
               リラックス効果を体験したい方にぴったりのスタンダードコース。頭、顔、首、疲れた箇所を重点的にもみほぐします。
             </p>
-            <p class="menu_info_01">Me Timeの〇〇コース（60分）</p>
+            <p class="menu_info_01">Me Timeの〇〇コース<br class="br_sp">（total　60分 /  ¥7,000）</p>
             <p class="menu_info_02 menu_bottom">
-              仕事の合間や時間がない時にすっきりできるお手軽コース。頭、顔を全体的に揉みほぐします。
+              不眠やストレスでお悩みの方・慢性的な疲れを感じる方におすすめのコース。頭、肩、首、背中をハンドマッサージで脳の疲労を重点的に和らげます。
             </p>
-            <p class="menu_info_01">Me Timeの〇〇コース（90分）</p>
+            <p class="menu_info_01">Me Timeの〇〇コース<br class="br_sp">（total　80分 /  ¥9,000）</p>
+            <p class="menu_info_02 menu_bottom">
+              全身の疲れもスッキリさせたい方に最適!頭だけでなく、全体を揉みほぐします。(頭、首、背中、肩甲骨、腕、ハンド、肩、膝裏〜ふくらはぎ)終わった後のスッキリ感を感じてください。
+            </p>
+            <p class="menu_info_01">Me Timeの〇〇コース<br class="br_sp">（total　120分 /  ¥14,000）</p>
             <p class="menu_info_02">
-              仕事の合間や時間がない時にすっきりできるお手軽コース。頭、顔を全体的に揉みほぐします。
+              上記メニューに加え、リフトアップケア•アロマフットバス有り(準備中)。
             </p>
+            <div class="process">
+              <a><button id="modal-open_6" class="process_btn">工程を見る →</button></a>
+            </div>
           </div>
+
+        </div>
+        <div id="modal-container_6">
+          <p class="modal_title">ドライヘッドスパの流れ</p>
+          <div class="modal_p">
+            <p class="modal_01">工程準備中</p>
+          </div>
+          <button id="modal-close_6" class="process_close">閉じる</button>
         </div>
       </article>
+      <div id="modal-bg_6"></div>
     </main>
 
     <figure class="img_null">
