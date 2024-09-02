@@ -342,6 +342,10 @@ body {
   border-radius: 25px;
 }
 
+.INFO .img_main img {
+  object-position: 45% 0%;
+}
+
 .sec_img {
   display: flex;
   justify-content: space-between;
@@ -425,10 +429,10 @@ body {
   transform: translate(-50%,-50%);
   text-align: center;
   background-color: #F3F2F0;
-  padding: 40px 0;
+  padding: 35px 0;
   border-radius: 50px;
   justify-items: center;
-  width: 90%;
+  width: 78%;
 }
 
 .faq_text h2{
@@ -444,7 +448,8 @@ body {
   font-family: "Marcellus", serif;
   font-weight: Regular;
   font-style: normal;
-  margin: 36px auto 43px;
+  /* margin: 36px auto 43px; */
+  margin: 25px auto 33px;
   line-height: 1.8em;
   letter-spacing: 0.2em;
 }
@@ -682,6 +687,7 @@ body {
   border-radius: 25px;
   margin: 85px 0 85px auto;
   display: block;
+  object-position: 30% 20%;
 }
 
 .img_info img {
@@ -763,7 +769,7 @@ body {
   margin-top: 15px;
 }
 
-.access {
+/* .access {
   display: grid;
   margin: 0 auto;
   margin-bottom: 80px;
@@ -812,6 +818,9 @@ body {
   line-height: 2em;
   font-size: 14px;
   letter-spacing: 0.1em;
+} */
+.info_content {
+  margin-bottom: 80px;
 }
 
 .map {
@@ -940,6 +949,23 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 30px 30px 0 0;
+}
+
+.menu_3 .img_menu img {
+  object-position: 50% 55%;
+}
+.menu_4 .img_menu img {
+  object-position: 50% 30%;
+}
+.menu_5 .img_menu img {
+  object-position: 50% 30%;
+}
+.menu_7 .img_menu img {
+  object-position: 50% 45%;
+}
+
+.pc_img {
+  display: none;
 }
 
 .menu_title {
@@ -1564,6 +1590,17 @@ body {
 
   .info h3 {
     margin-top: 0;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .salon_info dt{
+    margin-left: 10px;
+  }
+
+  .salon_info dd{
+    margin-left: 80px;
   }
 
   .img_info_right {
@@ -1585,11 +1622,21 @@ body {
     margin: 130px 0 130px;
   }
 
+  .salon_info {
+    width: 500px;
+  }
+
   .info_content {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 60px; */
     margin-bottom: 140px;
+  }
+
+  .info_small {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 15px;
   }
 
   .map {
@@ -2009,16 +2056,21 @@ body {
   }
 
   .salon_info dd{
-    margin-left: 70px;
-  }
-
-  .access dd{
-    margin-left: 70px;
+    margin-left: 100px;
   }
 
   .info h3 {
     margin-top: 0;
     letter-spacing: 0.03em;
+    width: 600px;
+  }
+
+  .salon_info {
+    width: 600px;
+  }
+
+  .info_small {
+    width: 600px;
   }
 
   .map {
@@ -2082,6 +2134,18 @@ body {
 
   .img_menu img {
     border-radius: 40px 0 0 40px;
+  }
+
+  .menu_7 .img_menu img {
+    object-position: 50% 50%;
+  }
+
+  .sp-tb_img {
+    display: none;
+  }
+
+  .pc_img {
+    display: block;
   }
 
   .menu_title {
