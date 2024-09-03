@@ -52,6 +52,7 @@ $(window).on('load scroll', function(){
     }
 });
 
+
 //　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　SALON, MENU　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 $(window).on('load scroll', function(){
     if($(this).scrollTop() > -1) {
@@ -289,3 +290,7 @@ function scr_ani(scr, offs_max) {
 		modalBg.classList.remove('active');
 	});
 }
+
+
+
+

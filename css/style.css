@@ -268,6 +268,93 @@ body {
 }
 
 
+/* ==================== MOVIE ================== */
+.MOVIE {
+  position: relative;
+  width: 100vw;
+  margin: 100px auto 160px;
+  padding: 0 18px;
+}
+
+.modal_open_movie {
+  cursor: pointer;
+}
+
+.MOVIE .movie_img {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+.MOVIE .movie_img img {
+  width: 100%;
+  height: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
+  filter: brightness(70%);
+  height: auto;
+  transition: transform .6s ease;
+}
+
+.MOVIE .movie_img:hover img {
+  transform: scale(1.1);
+}
+
+.MOVIE .movie_icon img{
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal_movie {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 997;
+  display: none;
+}
+
+.movie_bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* .modal_movie video {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.modal_movie iframe {
+  width: 90%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal_movie span {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 48px;
+  color: #fff;
+  z-index: 997;
+  cursor: pointer;
+}
+
+
+
 /* ==================== ABOUT/INFO/MENU ================== */
 .ABOUT,.INFO,.MENU {
   margin: 80px 18px;
@@ -448,7 +535,6 @@ body {
   font-family: "Marcellus", serif;
   font-weight: Regular;
   font-style: normal;
-  /* margin: 36px auto 43px; */
   margin: 25px auto 33px;
   line-height: 1.8em;
   letter-spacing: 0.2em;
@@ -769,56 +855,6 @@ body {
   margin-top: 15px;
 }
 
-/* .access {
-  display: grid;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  grid-template:
-    "box1 box1" 1fr
-    "box2 box2" 1fr
-    "box3 box3" 1fr
-    / 110px 1fr
-}
-
-.box_01{
-  grid-area: box1;
-  display: flex;
-  align-items: center;
-  border-top: 1px solid #9E9E9E;
-}
-
-.box_02{
-  grid-area: box2;
-  display: flex;
-  align-items: center;
-}
-
-.box_03{
-  grid-area: box3;
-  display: flex;
-  align-items: center;
-}
-
-.access_box{
-  border-bottom: 1px solid #9E9E9E;
-  padding: 30px 0;
-}
-
-.access dt{
-  width: 110px;
-  font-size: 14px;
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: 0.1em;
-}
-
-.access dd{
-  line-height: 2em;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-} */
 .info_content {
   margin-bottom: 80px;
 }
@@ -963,6 +999,9 @@ body {
 .menu_7 .img_menu img {
   object-position: 50% 45%;
 }
+.menu_8 .img_menu img {
+  object-position: 50% 57%;
+}
 
 .pc_img {
   display: none;
@@ -1075,7 +1114,6 @@ body {
   opacity: 0;
   pointer-events: none;
   font-family: "Noto Sans JP", sans-serif;
-  /* font-family: "Marcellus", serif; */
   font-optical-sizing: auto;
   font-weight: 400;
   display: grid;
@@ -1391,6 +1429,16 @@ body {
 
   .TOP figure img {
     object-position: 30% 75%;
+  }
+
+  /* ==================== MOVIE ================== */
+  .MOVIE {
+    margin: 140px auto 200px;
+    /* margin: 150px auto 230px; */
+  }
+
+  .MOVIE .movie_icon img{
+    width: 73px;
   }
 
   /* ==================== ABOUT/INFO/MENU ================== */
@@ -1841,6 +1889,16 @@ body {
     font-size: 13px;
   }
 
+
+  /* ==================== MOVIE ================== */
+  .MOVIE {
+    margin: 150px auto 230px;
+  }
+
+  .modal_movie iframe {
+    width: 80%;
+  }
+
   /* ==================== ABOUT/INFO/MENU ================== */
   .img_main {
     width: 45%;
@@ -2137,6 +2195,9 @@ body {
   }
 
   .menu_7 .img_menu img {
+    object-position: 50% 50%;
+  }
+  .menu_8 .img_menu img {
     object-position: 50% 50%;
   }
 
