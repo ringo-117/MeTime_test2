@@ -902,6 +902,10 @@ body {
 /*==============================================================
 　　MENU
 ==============================================================*/
+.br_tb-pc {
+  display: none;
+}
+
 .menu {
   margin-bottom: 120px;
 }
@@ -1172,6 +1176,15 @@ body {
   display: flex;
   font-size: 18px;
   margin-top: 30px;
+}
+
+.menu_2 .modal_p {
+  border-style: none;
+  margin-left: 30px;
+  margin-top: 30px;
+  letter-spacing: 0.15em;
+  font-size: 18px;
+  line-height: 2.5em;
 }
 
 .modal_01::before {
@@ -1699,6 +1712,14 @@ body {
   /*==============================================================
   　　　TB_MENU
   ==============================================================*/
+  .br_tb-pc {
+    display: block;
+  }
+
+  .menu_2 .menu_title p {
+    display: flex;
+  }
+
   .menu {
     margin-bottom: 145px;
   }
