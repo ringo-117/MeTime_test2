@@ -1038,6 +1038,11 @@ body {
   line-height: 2em;
 }
 
+.menu_title span {
+  font-size: 13px;
+  margin-left: 20px;
+}
+
 .menu_info {
   padding: 30px 20px 38px;
 }
@@ -2253,6 +2258,11 @@ body {
 
   .menu_title p {
     font-size: 20px;
+  }
+
+  .menu_title span {
+    font-size: 14px;
+    margin-left: 30px;
   }
 
   .menu_info_01 {
