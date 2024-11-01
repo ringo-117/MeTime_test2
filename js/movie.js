@@ -1,5 +1,5 @@
 
-//　MOVIE
+// 　MOVIE
 document.querySelectorAll(".modal_open_movie").forEach
 ((video) => {
 	video.onclick = () => {
@@ -30,3 +30,4 @@ const div = (document.querySelector(".modal_movie div").onclick = () => {
 	// mute = "1";
 	document.querySelector(".modal_movie iframe").pause();
 });
+
