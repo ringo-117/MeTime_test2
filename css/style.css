@@ -275,8 +275,7 @@ body {
 .movie {
   position: relative;
   width: 100vw;
-  /* margin: 100px auto 160px; */
-  margin: 80px auto 0;
+  margin: 70px auto 0;
   padding: 0 18px;
 }
 
