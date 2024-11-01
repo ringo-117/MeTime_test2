@@ -269,10 +269,11 @@ body {
 
 
 /* ==================== MOVIE ================== */
-.MOVIE {
+.movie {
   position: relative;
   width: 100vw;
-  margin: 100px auto 160px;
+  /* margin: 100px auto 160px; */
+  margin: 80px auto 0;
   padding: 0 18px;
 }
 
@@ -280,14 +281,14 @@ body {
   cursor: pointer;
 }
 
-.MOVIE .movie_img {
+.movie .movie_img {
   max-width: 900px;
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
 }
 
-.MOVIE .movie_img img {
+.movie .movie_img img {
   width: 100%;
   height: 100%;
   object-position: 50% 50%;
@@ -297,11 +298,11 @@ body {
   transition: transform .6s ease;
 }
 
-.MOVIE .movie_img:hover img {
+.movie .movie_img:hover img {
   transform: scale(1.1);
 }
 
-.MOVIE .movie_icon img{
+.movie .movie_icon img{
   width: 50px;
   position: absolute;
   top: 50%;
@@ -325,14 +326,6 @@ body {
   background: rgba(0, 0, 0, 0.8);
 }
 
-/* .modal_movie video {
-  width: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
 .modal_movie iframe {
   width: 90%;
   height: auto;
@@ -351,6 +344,16 @@ body {
   color: #fff;
   z-index: 997;
   cursor: pointer;
+}
+
+.movie_p {
+  margin: 0 auto;
+  font-size: 13px;
+  margin-top: 16px;
+  line-height: 1.8em;
+  padding: 0 18px;
+  margin-bottom: 100px;
+  max-width: 900px;
 }
 
 
@@ -1455,13 +1458,16 @@ body {
   }
 
   /* ==================== MOVIE ================== */
-  .MOVIE {
-    margin: 140px auto 200px;
-    /* margin: 150px auto 230px; */
+  .movie {
+    margin: 140px auto 0;
   }
 
-  .MOVIE .movie_icon img{
+  .movie .movie_icon img{
     width: 73px;
+  }
+
+  .movie_p {
+    margin-bottom: 200px;
   }
 
   /* ==================== ABOUT/INFO/MENU ================== */
@@ -1844,6 +1850,13 @@ body {
 
 }
 
+/* @media screen and (min-width: 935px) {
+  movie下の文字用レイアウト 900px以上の範囲に収めるデザインはこの中に記述
+  .movie_p {
+    padding: 0;
+  }
+} */
+
 @media screen and (min-width: 1081px) {
   /* パソコン用レイアウト 1081px以上の範囲に収めるデザインはこの中に記述 */
 
@@ -1926,12 +1939,17 @@ body {
 
 
   /* ==================== MOVIE ================== */
-  .MOVIE {
-    margin: 150px auto 230px;
+  .movie {
+    margin: 150px auto 0;
   }
 
   .modal_movie iframe {
     width: 80%;
+  }
+
+  .movie_p {
+    margin-bottom: 230px;
+    padding: 0;
   }
 
   /* ==================== ABOUT/INFO/MENU ================== */
