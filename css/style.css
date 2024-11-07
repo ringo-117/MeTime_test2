@@ -807,8 +807,8 @@ body {
     margin-bottom: 30px;
     grid-template:
       "box1 box1" auto
-      "box2 box2" 1fr
-      "box3 box3" 1fr
+      "box2 box2" auto
+      "box3 box3" auto
       "box4 box4" auto
       "box5 box5" 1fr
       / 110px 1fr
@@ -851,7 +851,7 @@ body {
   }
 
   .salon_info dt{
-    width: 110px;
+    min-width: 120px;
     font-size: 14px;
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
@@ -1691,7 +1691,7 @@ body {
   }
 
   .salon_info dd{
-    margin-left: 80px;
+    margin-left: 70px;
   }
 
   .img_info_right {
@@ -1718,9 +1718,6 @@ body {
   }
 
   .info_content {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 60px; */
     margin-bottom: 140px;
   }
 
@@ -1864,12 +1861,6 @@ body {
 
 }
 
-/* @media screen and (min-width: 935px) {
-  movie下の文字用レイアウト 900px以上の範囲に収めるデザインはこの中に記述
-  .movie_p {
-    padding: 0;
-  }
-} */
 
 @media screen and (min-width: 1081px) {
   /* パソコン用レイアウト 1081px以上の範囲に収めるデザインはこの中に記述 */
@@ -2147,6 +2138,10 @@ body {
   /*==============================================================
   　　　PC_SALON
   ==============================================================*/
+  .br_sp-tb {
+    display: none;
+  }
+
   .sec_name {
     font-size: 32px;
     letter-spacing: 0.05em;
@@ -2181,7 +2176,7 @@ body {
   }
 
   .salon_info dd{
-    margin-left: 100px;
+    margin-left: 90px;
   }
 
   .info h3 {
