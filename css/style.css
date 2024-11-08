@@ -866,18 +866,27 @@ body {
     letter-spacing: 0.1em;
   }
 
+  .salon_info .box_05 dd p{
+    line-height: 1.5em;
+    margin: 5px 0;
+  }
+
   .info_small {
     font-size: 12px;
     margin-top: 15px;
   }
 
   .small {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   /* ①文字を青くする */
   .pay {
     color: #3f88f5;
+  }
+
+  .pay a {
+    margin-top: 20px;
   }
 
   /* ③矢印 */
