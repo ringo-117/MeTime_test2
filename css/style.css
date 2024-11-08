@@ -871,6 +871,22 @@ body {
     margin-top: 15px;
   }
 
+  /* ①文字を青くする */
+  .pay {
+    color: #3f88f5;
+  }
+
+  /* ③矢印 */
+  .arrow-right {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 10px;
+    border-top: 2px solid #3f88f5;
+    border-right: 2px solid #3f88f5;
+    transform: rotate(45deg);
+  }
+
   .info_content {
     margin-bottom: 80px;
   }
