@@ -871,6 +871,10 @@ body {
     margin-top: 15px;
   }
 
+  .small {
+    font-size: 12px;
+  }
+
   /* ①文字を青くする */
   .pay {
     color: #3f88f5;
