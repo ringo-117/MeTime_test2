@@ -204,7 +204,6 @@ body {
   .TOP {
     display: grid;
     grid-template-rows: auto 150px;
-    /* height: 100vh; */
     height: calc(var(--vh, 1vh) * 100);
     padding: 10px 10px 0;
   }
